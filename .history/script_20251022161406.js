@@ -45,6 +45,7 @@
 
 
 // let ctr = 1;
+
 // function addtodo(){
 //     const inputEl = document.querySelector("input");
 //     const value = inputEl.value;
@@ -60,35 +61,18 @@
 //     element.parentNode.removeChild(element)
 // }
 
-//  Raw HTML element
 
-// let ctr = 0 ;
-//  function addtodo(){
-//     const inputEL = document.querySelector("input");
-//     const value = inputEL.value;
-//     const newDivEL= document.createElement("div");
-//     newDivEL.setAttribute("id",ctr);
-//     newDivEL.innerHTML = value + ' <button onclick="deletetodo('+ ctr +')" > delete</button>';
-//     document.querySelector("body").appendChild(newDivEL);
-//  }
+let ctr = 0 ;
+ function addtodo(){
+    const inputEL = document.querySelector("input");
+    const value = inputEL.value;
+    const newDivEL= document.createElement("div");
+    newDivEL.setAttribute("id",ctr);
+    newDivEL.innerHTML = "<div>" + value + '</div> <button onclick="deletetodo('+ ctr +')" > delete</button>';
+    document.querySelector("body").appendChild(newDivEL);
+ }
 
-//  function deletetodo(index){
-//     const element = document.getElementById(index);
-//     element.parentNode.removeChild(element);
-//  }
-
-//  More Cleaner Way to write the code
-
-function addtodo(){
-   const value = document.querySelector("input").value;
-   const spanEl = document.createElement("span");
-   const buttonEl = document.createElement("button");
-   spanEl.innerHTML = value;
-   buttonEl.innerHTML = "Delete";
-   ///
-   const divEl = document.createElement("div");
-   divEl.appendChild(spanEl);
-   divEl.appendChild(buttonEl);
-   ///
-   document.querySelector("body").appendChild(divEl)
-}
+ function deletetodo(index){
+    const element = document.getElementById(index);
+    element.parentNode.removeChild(element);
+ }

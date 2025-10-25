@@ -45,6 +45,7 @@
 
 
 // let ctr = 1;
+
 // function addtodo(){
 //     const inputEl = document.querySelector("input");
 //     const value = inputEl.value;
@@ -60,7 +61,6 @@
 //     element.parentNode.removeChild(element)
 // }
 
-//  Raw HTML element
 
 // let ctr = 0 ;
 //  function addtodo(){
@@ -77,18 +77,6 @@
 //     element.parentNode.removeChild(element);
 //  }
 
-//  More Cleaner Way to write the code
-
-function addtodo(){
-   const value = document.querySelector("input").value;
-   const spanEl = document.createElement("span");
-   const buttonEl = document.createElement("button");
-   spanEl.innerHTML = value;
-   buttonEl.innerHTML = "Delete";
-   ///
-   const divEl = document.createElement("div");
-   divEl.appendChild(spanEl);
-   divEl.appendChild(buttonEl);
-   ///
-   document.querySelector("body").appendChild(divEl)
+function addTodo(){
+   
 }
