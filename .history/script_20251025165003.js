@@ -96,80 +96,17 @@
 
 //Better approach as we are going more functionality
 
-// let todos=[];
-// function createTodoComponent(todo){
-//    const div = document.querySelector("div");
-//    const h1 = document.createElement("h1");
-//    const button = document.createElement("button");
-//    button.innerHTML = "Delete"
-//    todo.innerHTML = todo.title;
-//    div.append(h1);
-//    div.append(button);
-//    return div
-// }
-
-// This is React library do it automatically 
-
-// function render(){
-//    document.querySelector("#todos").innerHTML="";
-//    for(let i = 0;i<todos.length;i++){
-//       const element = createTodoComponent(todos[i]);
-//       document.querySelector("#todos").appendChild(div)
-//    }
-// }
-
-// Simple react like code 
-
-
-// input box
-// button onclick="addTodo()"
-// button onclick="DeletFirstTodo()"
-// button onclick="DeleteLastTodo()"
-
-
-let todos = [];
-
-function addTodo(){
-   todos.push({
-      title : document.querySelector("input").value
-   })
-   render();
-}
-
-function deleteTodo(index){
-   todos.splice(index,1);
-   render()
-}
-
-function deleteFirstTodo(){
-   todos.splice(0,1);
-   render()
-}
-
-function deleteLastTodo(){
-   todos.pop();
-   render()
-}
-
-
-function createTodoComponent(todo,index){
-   const div = document.createElement("div")
-   const h1 = document.createElement("h1")
+let todos=[];
+function creatTodoComponent(todo){
+   const div = document.querySelector("div");
+   const h1 = document.createElement("h1");
    const button = document.createElement("button");
-   button.innerHTML = "Delete";
-   button.addEventListener("click",function(){
-      deleteTodo(index)
-   })
-   h1.innerHTML = todo.title;
+   button.innerHTML = "Delete"
+   todo.innerHTML = todo.title;
    div.append(h1);
    div.append(button);
    return div
 }
- // Somewhat react
 function render(){
-   document.querySelector("#todos").innerHTML = "";
-   for (let i = 0; i < todos.length ; i++){
-      const element = createTodoComponent(todos[i]);
-      document.querySelector("#todos").appendChild(element)
-   }
+   
 }

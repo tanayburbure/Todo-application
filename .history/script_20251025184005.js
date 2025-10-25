@@ -136,30 +136,22 @@ function addTodo(){
    render();
 }
 
-function deleteTodo(index){
-   todos.splice(index,1);
-   render()
-}
-
 function deleteFirstTodo(){
    todos.splice(0,1);
    render()
 }
 
 function deleteLastTodo(){
-   todos.pop();
+   todos.splice(todos.length-1,1);
    render()
 }
 
 
-function createTodoComponent(todo,index){
+function createTodoComponent(todo){
    const div = document.createElement("div")
    const h1 = document.createElement("h1")
    const button = document.createElement("button");
    button.innerHTML = "Delete";
-   button.addEventListener("click",function(){
-      deleteTodo(index)
-   })
    h1.innerHTML = todo.title;
    div.append(h1);
    div.append(button);

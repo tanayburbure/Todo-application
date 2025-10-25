@@ -136,11 +136,6 @@ function addTodo(){
    render();
 }
 
-function deleteTodo(index){
-   todos.splice(index,1);
-   render()
-}
-
 function deleteFirstTodo(){
    todos.splice(0,1);
    render()
@@ -152,7 +147,7 @@ function deleteLastTodo(){
 }
 
 
-function createTodoComponent(todo,index){
+function createTodoComponent(todo){
    const div = document.createElement("div")
    const h1 = document.createElement("h1")
    const button = document.createElement("button");
