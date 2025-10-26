@@ -184,7 +184,7 @@ function addTodo(){
    render()
 }
 
-function deleteTodo(index){
+function deleteTodo(){
    todos.splice(index,1);
    render()
 }

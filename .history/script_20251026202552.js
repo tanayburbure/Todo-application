@@ -181,10 +181,9 @@ function addTodo(){
    todos.push({
       title:document.querySelector("input").value
    })
-   render()
 }
 
-function deleteTodo(index){
+function deleteTodo(){
    todos.splice(index,1);
    render()
 }
@@ -199,25 +198,23 @@ function deleteLastTodo(){
    render()
 }
 
+// function createTodoComponent(todo,index){
+//    const div = document.createElement("div");
+//    const h1 = document.createElement("h1");
+//    const button = document.createElement("button")
+//    button.innerHTML = "delete";
+//    button.addEventListener("click",function(){
+//       deleteTodo(index)
+//    })
+//    h1.innerHTML = todo.title
+//    div.appendChild(h1);
+//    div.appendChild(button);
+//    return div
+// }
+
+
+
 
 function createTodoComponent(todo,index){
-   const div = document.createElement("div");
-   const h1 = document.createElement("h1");
-   const button = document.createElement("button")
-   button.innerHTML = "delete";
-   button.addEventListener("click",function(){
-      deleteTodo(index);
-   })
-   h1.innerHTML = todo.title;
-   div.appendChild(h1);
-   div.appendChild(button)
-   return div;
-}
-
-function render(){
-   document.querySelector("#todos").innerHTML="";
-   for (let i = 0;i < todos.length;i++){
-      const element = createTodoComponent(todos[i]);
-      document.querySelector("#todos").appendChild(element);
-   }
+   const div = document.createElement("div")
 }
